@@ -17,3 +17,13 @@ Config :
 ![Waybar Screenshot](images/bar.png)
 ### Desktop
 ![Desktop Screenshot](images/desktop.png)
+### Fastfetch + btop + nvim
+![Fastfetch Btop Nvim Screenshot](images/fastfetch-btop-nvim.png)
+### Nvim + firefox
+![Firefox Nvim Screenshot](images/nvim-firefox.png)
+### Lock Screen Greetd
+![Lock Screen creenshot](images/lockscreen.png)
+### rofi
+![Rofi creenshot](images/rofi.png)
+### Custom Spotify Notification
+![Custom Spotify Notification creenshot](images/custom-spotify-notification.png)
