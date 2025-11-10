@@ -1,0 +1,9 @@
+[Unit]
+Description=Spotify Track Change Notifications
+
+[Service]
+ExecStart=%h/.local/bin/spotify-notify.sh
+
+[Install]
+WantedBy=default.target
+
