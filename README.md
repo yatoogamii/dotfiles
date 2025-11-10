@@ -20,7 +20,7 @@ Config :
 ### Fastfetch + btop + nvim
 ![Fastfetch Btop Nvim Screenshot](images/fastfetch-btop-nvim.png)
 ### Nvim + firefox
-![Firefox Nvim Screenshot](images/nvim-firefox.png)
+![Nvim + Firefox Screenshot](images/nvim-firefox.png)
 ### Lock Screen Greetd
 ![Lock Screen creenshot](images/lockscreen.png)
 ### rofi
