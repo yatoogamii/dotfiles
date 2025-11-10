@@ -1,0 +1,35 @@
+[global]
+monitor = 0
+width = 400
+height = (0, 400)
+origin = top-right
+offset = (15, 14)
+corner_radius = 10
+gap_size = 5
+background = "#212123"
+foreground = "#f2f0e5"
+frame_width = 2
+font = "JetBrainsMonoNL Nerd Font" 10
+stack_duplicates = false
+hide_duplicate_count = true
+padding = 10
+horizontal_padding = 10
+line_height = 3
+min_icon_size = 128
+max_icon_size = 128
+text_icon_padding = 20
+icon_corner_radius = 5
+
+[urgency_low]
+frame_color = "#4b80ca"
+
+[urgency_normal]
+frame_color = "#4b80ca"
+
+[urgency_critical]
+frame_color = "#b45252"
+
+[spotify-rule]
+appname = spotify
+format = "%s\n%b"
+timeout = 3

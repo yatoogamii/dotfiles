@@ -1,0 +1,88 @@
+{
+  "layer": "top",
+  "output": "HDMI-A-1",
+  "position": "top",
+  "height": 60,
+  "modules-left": [
+    "clock"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "group/hardware",
+    "group/infos"
+  ],
+  "clock": {
+    "format": "{:%I:%M %p | %d/%m/%y}",
+    "timezone": "Asia/Tokyo",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "format-icons": {
+      "default": "",
+      "active": ""
+    }
+  },
+  "network": {
+    "tooltip": false,
+    "format-ethernet": "󰒢",
+    "format-wifi": "",
+    "format-linked": "󱘖 ",
+    "format-disconnected": "",
+    "on-click": "nm-connection-editor"
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "format": "󰕾",
+    "on-click": "pavucontrol -t 3"
+  },
+  "group/infos": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "network"
+    ]
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/hardware",
+      "cpu",
+      "memory",
+      "custom/temperature"
+    ],
+    "drawer": {
+      "click-to-reveal": true
+    }
+  },
+  "custom/hardware": {
+    "format": "{icon}",
+    "format-icons": ""
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": " |   {percentage}% |",
+    "tooltip": false
+  },
+  "custom/temperature": {
+    "exec": "sensors | awk '/Tctl:/ {print int($2)}'",
+    "format": "  {}°C",
+    "interval": 20,
+    "tooltip": false
+  }
+}
