@@ -9,7 +9,7 @@ Config :
 - [rofi](https://github.com/DaveDavenport/rofi)
 - [neovim](https://github.com/neovim/neovim)
 - [zsh](https://github.com/ohmyzsh/ohmyzsh)
-- [greetd](https://github.com/morhetz/greetd)
+- [greetd](https://git.sr.ht/~kennylevinsen/greetd)
 
 ## Screenshots
 ### Waybar
