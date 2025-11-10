@@ -1,15 +1,16 @@
 # My dotfiles
 
 Config :
-- [hyprland](https://github.com/hyprwm/Hyprland)
-- [wayland](https://wayland.freedesktop.org/)
-- [waybar](https://github.com/Alexays/Waybar)
-- [alacritty](https://github.com/alacritty/alacritty)
-- [dunst](https://github.com/dunst-project/dunst)
-- [rofi](https://github.com/DaveDavenport/rofi)
-- [neovim](https://github.com/neovim/neovim)
-- [zsh](https://github.com/ohmyzsh/ohmyzsh)
-- [greetd](https://git.sr.ht/~kennylevinsen/greetd)
+- [EndeavorOS](https://endeavouros.com/)
+- [Hyprland](https://github.com/hyprwm/Hyprland)
+- [Wayland](https://wayland.freedesktop.org/)
+- [Waybar](https://github.com/Alexays/Waybar)
+- [Alacritty](https://github.com/alacritty/alacritty)
+- [Dunst](https://github.com/dunst-project/dunst)
+- [Rofi](https://github.com/DaveDavenport/rofi)
+- [Neovim](https://github.com/neovim/neovim)
+- [Zsh](https://github.com/ohmyzsh/ohmyzsh)
+- [Greetd](https://git.sr.ht/~kennylevinsen/greetd)
 
 ## Screenshots
 ### Waybar
