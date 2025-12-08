@@ -60,14 +60,12 @@ func main() {
 }
 
 func CopyFile(src, dst string) error {
-	// Ensue the destination directory exists
 	dstDir := filepath.Dir(dst)
 
 	if err := os.MkdirAll(dstDir, 0755); err != nil {
 		return fmt.Errorf("failed to create destination directory: %v", err)
 	}
 
-	// Open the source file
 	sourceFile, err := os.Open(src)
 
 	if err != nil {
@@ -76,7 +74,6 @@ func CopyFile(src, dst string) error {
 
 	defer sourceFile.Close()
 
-	// Create the destination file
 	destinationFile, err := os.Create(dst)
 
 	if err != nil {
@@ -85,12 +82,10 @@ func CopyFile(src, dst string) error {
 
 	defer destinationFile.Close()
 
-	// Copy the content
 	if _, err = io.Copy(destinationFile, sourceFile); err != nil {
 		return fmt.Errorf("failed to copy file: %v", err)
 	}
 
-	// Flush file metadata to disk
 	if err = destinationFile.Sync(); err != nil {
 		return fmt.Errorf("failed to sync file: %v", err)
 	}
@@ -99,7 +94,6 @@ func CopyFile(src, dst string) error {
 }
 
 func CopyDir(src, dst string) error {
-	// Loop through the files in the source directory
 	files, err := os.ReadDir(src)
 
 	if err != nil {
