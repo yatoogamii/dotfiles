@@ -28,8 +28,3 @@ frame_color = "#4b80ca"
 
 [urgency_critical]
 frame_color = "#b45252"
-
-[spotify-rule]
-appname = spotify
-format = "%s\n%b"
-timeout = 3

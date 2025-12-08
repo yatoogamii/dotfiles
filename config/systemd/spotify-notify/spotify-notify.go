@@ -13,19 +13,18 @@ import (
 )
 
 const (
-	spotifyPlayerPath   = "/org/mpris/MediaPlayer2"
-	spotifyBusInterface = "org.freedesktop.DBus.Properties"
-	spotifyBusMember    = "PropertiesChanged"
+	signalSender        = "org.mpris.MediaPlayer2.spotify"
+	signalMember        = "PropertiesChanged"
 	notificationBusName = "org.freedesktop.Notifications"
 	notificationBusPath = "/org/freedesktop/Notifications"
 	coverPath           = "/tmp/spotify-cover.png"
 )
 
 type TrackInfo struct {
-	Title    string
-	Artist   string
-	Album    string
-	AlbumArt string
+	Title  string
+	Artist string
+	Album  string
+	ArtUrl string
 }
 
 func main() {
@@ -38,9 +37,8 @@ func main() {
 	defer conn.Close()
 
 	if err := conn.AddMatchSignal(
-		dbus.WithMatchObjectPath(spotifyPlayerPath),
-		dbus.WithMatchInterface(spotifyBusInterface),
-		dbus.WithMatchMember(spotifyBusMember),
+		dbus.WithMatchSender(signalSender),
+		dbus.WithMatchMember(signalMember),
 	); err != nil {
 		log.Fatalf("Could not add match signal: %v", err)
 	}
@@ -79,11 +77,11 @@ func handleMetadataChange(metadata dbus.Variant) {
 
 	track := extractTrackInfo(metaMap)
 
-	if track.AlbumArt == "" || track.Title == "" {
+	if track.Title == "Advertissement" {
 		return
 	}
 
-	if err := downloadCover(track.AlbumArt); err != nil {
+	if err := downloadCover(track.ArtUrl); err != nil {
 		log.Printf("Failed to download cover: %v", err)
 	}
 
@@ -167,7 +165,7 @@ func extractTrackInfo(metadata map[string]dbus.Variant) TrackInfo {
 	}
 
 	if artURL, ok := metadata["mpris:artUrl"]; ok {
-		track.AlbumArt = variantToString(artURL)
+		track.ArtUrl = variantToString(artURL)
 	}
 
 	return track
