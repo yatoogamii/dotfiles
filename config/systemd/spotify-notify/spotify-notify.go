@@ -77,7 +77,7 @@ func handleMetadataChange(metadata dbus.Variant) {
 
 	track := extractTrackInfo(metaMap)
 
-	if track.Title == "Advertissement" {
+	if track.Title == "Advertisement" {
 		return
 	}
 
