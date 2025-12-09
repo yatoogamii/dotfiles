@@ -56,5 +56,5 @@ vim.keymap.set("n", "<F1>", "<cmd>Neotree toggle<cr>", {})
 vim.keymap.set("i", "<F1>", "<Nop>", {})
 
 -- Diagnostic
-vim.keymap.set("n", "<leader>]", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<leader>[", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "<leader>[", vim.diagnostic.goto_next)
+vim.keymap.set("n", "<leader>]", vim.diagnostic.goto_prev)
