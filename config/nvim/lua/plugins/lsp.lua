@@ -14,7 +14,7 @@ return {
         },
       })
       require("mason-lspconfig").setup({
-        ensure_installed = { "ts_ls", "lua_ls", "jsonls", "gopls", "terraformls", "rust_analyzer" },
+        ensure_installed = { "ts_ls", "lua_ls", "jsonls", "gopls", "terraformls", "rust_analyzer", "clangd" },
       })
 
       vim.lsp.enable("ts_ls")
@@ -24,6 +24,7 @@ return {
       vim.lsp.enable("terraformls")
       vim.lsp.enable("rust_analyzer")
       vim.lsp.enable("roslyn")
+      vim.lsp.enable("clangd")
     end,
   },
 }
