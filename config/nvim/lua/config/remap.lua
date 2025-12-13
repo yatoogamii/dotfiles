@@ -44,7 +44,7 @@ end, {})
 vim.keymap.set("n", "<leader>2", function()
   vim.diagnostic.open_float()
 end, {})
-vim.keymap.set("n", "<leader>3", "<cmd>FzfLua lsp_code_actions<CR>", {})
+vim.keymap.set("n", "<leader>3", "<cmd>FzfLua lsp_code_actions silent=true<CR>", {})
 
 -- GoTo
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
