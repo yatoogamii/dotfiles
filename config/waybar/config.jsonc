@@ -2,24 +2,22 @@
   "layer": "top",
   "output": "HDMI-A-1",
   "position": "top",
-  "height": 60,
+  "height": 40,
+  // Left Modules
   "modules-left": [
-    "clock"
+    "clock",
   ],
+  "clock": {
+    "format": "{:L%p %I:%M}",
+    "timezone": "Asia/Tokyo",
+    "locale": "ja_JP.UTF-8",
+    "tooltip": false
+  },
+  // Center Modules
   "modules-center": [
     "hyprland/workspaces"
   ],
-  "modules-right": [
-    "group/hardware",
-    "group/infos"
-  ],
-  "clock": {
-    "format": "{:%I:%M %p | %d/%m/%y}",
-    "timezone": "Asia/Tokyo",
-    "tooltip": false
-  },
   "hyprland/workspaces": {
-    "all-outputs": true,
     "format": "{icon}",
     "persistent-workspaces": {
       "*": [
@@ -31,57 +29,42 @@
       ]
     },
     "format-icons": {
-      "default": "",
-      "active": ""
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十"
     }
   },
-  "network": {
-    "tooltip": false,
-    "format-ethernet": "󰒢",
-    "format-wifi": "",
-    "format-linked": "󱘖 ",
-    "format-disconnected": "",
-    "on-click": "nm-connection-editor"
-  },
-  "pulseaudio": {
-    "tooltip": false,
-    "format": "󰕾",
-    "on-click": "pavucontrol -t 3"
-  },
-  "group/infos": {
-    "orientation": "horizontal",
-    "modules": [
-      "pulseaudio",
-      "network"
-    ]
-  },
-  "group/hardware": {
-    "orientation": "horizontal",
-    "modules": [
-      "custom/hardware",
-      "cpu",
-      "memory",
-      "custom/temperature"
-    ],
-    "drawer": {
-      "click-to-reveal": true
-    }
-  },
-  "custom/hardware": {
-    "format": "{icon}",
-    "format-icons": ""
-  },
+  // Right Modules
+  "modules-right": [
+    "memory",
+    "custom/gpu",
+    "cpu",
+    "custom/temperature"
+  ],
   "cpu": {
-    "format": " {usage}%",
+    "format": "   {usage}%",
     "tooltip": false
   },
   "memory": {
-    "format": " |   {percentage}% |",
+    "format": "    {percentage}%",
     "tooltip": false
   },
   "custom/temperature": {
     "exec": "sensors | awk '/Tctl:/ {print int($2)}'",
-    "format": "  {}°C",
+    "format": "  {}°C",
+    "interval": 20,
+    "tooltip": false
+  },
+  "custom/gpu": {
+    "exec": "nvidia-smi -a | awk '/GPU  / {print int($3)}'",
+    "format": "   {}%",
     "interval": 20,
     "tooltip": false
   }

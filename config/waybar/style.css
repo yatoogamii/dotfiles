@@ -1,80 +1,61 @@
 * {
-  font-family: JetBrainsMonoNL Nerd Font;
+  font-family: JetBrainsMonoNS Nerd Font;
+  font-weight: bold;
   font-size: 16px;
-  border-radius: 0;
-  min-height: 0;
-  border: none;
-  font-weight: 600;
 }
 
 window#waybar {
-  all:unset;
-  opacity: 0.9;
+  all: unset;
+  background-color: #242933;
 }
 
-.modules-left {
-  padding: 7px 15px;
-  margin:10px 0 5px 5px;
-  border-radius:10px;
-  background-color: #3a3858;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  color: #f2f0e5;
-}
-
-.modules-center {
-  padding: 7px;
-  margin:10px 0 5px 0;
-  border-radius:10px;
-  background-color: #3a3858;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  color: #f2f0e5;
-}
-
-#workspaces button {
-  color: #646365;
-  transition: all .2s ease;
-}
-
-#workspaces button:hover {
-  color: #b8b5b9;
-  border: none;
-  background-color: rgba(0,0,0,0);
-}
-
-#workspaces button label {
-  font-size: 12px;
+#clock {
+  padding: 0 15px;
+  background-color: #5E81AC; 
+  background-color: rgba(94, 129, 172, 0.1);
+  border-top: 2px solid rgba(94, 129, 172, 1);
+  color: rgba(94, 129, 172, 1);
 }
 
 #workspaces button.active {
-  color: #4b80ca;
+  border-radius: 0;
+  background-color: rgba(128, 179, 178, 0.1);
+  border-top: 2px solid rgba(128, 179, 178, 1);
+  color: rgba(128, 179, 178, 1);
 }
 
-#workspaces button.active label {
-  font-size: 20px;
+#workspaces label {
+  font-size: 18px;
 }
 
-#custom-hardware  {
-  padding: 0 5px 0 0;
+#cpu {
+  min-width: 60px;
+  padding: 0 15px;
+  background-color: rgba(203, 119, 93, 0.1);
+  border-top: 2px solid rgba(203, 119, 93, 1);
+  color: rgba(203, 119, 93, 1);
 }
 
-#hardware {
-  padding: 7px 15px;
-  margin: 10px 5px 5px 0;
-  border-radius:10px;
-  background-color: #3a3858;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  color: #f2f0e5;
+#memory {
+  min-width: 60px;
+  padding: 0 15px;
+  background-color: rgba(151, 182, 124, 0.1);
+  border-top: 2px solid rgba(151, 182, 124, 1);
+  color: rgba(151, 182, 124, 1);
 }
 
-#infos {
-  padding: 7px;
-  margin: 10px 5px 5px 0;
-  border-radius:10px;
-  background-color: #3a3858;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
-  color: #f2f0e5;
+#custom-temperature {
+  min-width: 60px;
+  padding: 0 15px;
+  background-color: rgba(183, 78, 88, 0.1);
+  border-top: 2px solid rgba(183, 78, 88, 1);
+  color: rgba(183, 78, 88, 1);
 }
 
-#infos label {
-  padding: 0 12px;
+#custom-gpu {
+  min-width: 60px;
+  padding: 0 15px;
+  background-color: rgba(231, 193, 115, 0.1);
+  border-top: 2px solid rgba(231, 193, 115, 1);
+  color: rgba(231, 193, 115, 1);
 }

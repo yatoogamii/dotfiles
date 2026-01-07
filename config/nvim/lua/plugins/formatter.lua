@@ -8,9 +8,10 @@ return {
 			conform.setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					javascript = { "prettier" },
-					typescript = { "prettier" },
-					json = { "fixjson" },
+					c = { "clangd-format" },
+					cs = { "clangd-format" },
+					cpp = { "clangd-format" },
+					json = { "jq" },
 				},
 				format_on_save = {
 					timeout_ms = 500,

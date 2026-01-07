@@ -1,42 +1,40 @@
 return {
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-			"hrsh7th/cmp-cmdline",
+	"saghen/blink.cmp",
+	version = "1.*",
+	dependencies = {
+		"xzbdmw/colorful-menu.nvim",
+	},
+	opts = {
+		keymap = { preset = "default", ["<CR>"] = { "select_and_accept", "fallback" } },
+		cmdline = { enabled = false },
+		appearance = {
+			nerd_font_variant = "mono",
 		},
-		config = function()
-			local cmp = require("cmp")
-
-			cmp.setup({
-				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-				}, { name = "buffer" }),
-				window = {
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
+		completion = {
+			documentation = { auto_show = true },
+			ghost_text = { enabled = false },
+			menu = {
+				draw = {
+					-- Better Highlight with corloful-menu.nvim
+					columns = { { "kind_icon" }, { "label", gap = 1 } },
+					components = {
+						label = {
+							text = function(ctx)
+								return require("colorful-menu").blink_components_text(ctx)
+							end,
+							highlight = function(ctx)
+								return require("colorful-menu").blink_components_highlight(ctx)
+							end,
+						},
+					},
 				},
-				mapping = cmp.mapping.preset.insert({
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
-				}),
-			})
-		end,
+			},
+		},
+		sources = {
+			default = { "lsp", "buffer" },
+		},
+		fuzzy = { implementation = "prefer_rust_with_warning" },
+		signature = { enabled = true },
 	},
-	{
-		"ray-x/lsp_signature.nvim",
-		event = "InsertEnter",
-		config = function()
-			local lsp = require("lsp_signature")
-
-			lsp.setup({
-				bind = true,
-				handler_opts = {
-					border = "rounded",
-				},
-			})
-		end,
-	},
+	opts_extend = { "sources.default" },
 }

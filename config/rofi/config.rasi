@@ -7,8 +7,7 @@
 
 window {
     width: 480;
-    border-radius: 10px;
-    border-color: #4b80ca;
+    border-color: #5E81AC;
     background-color: #212123;
 }
 
@@ -18,9 +17,8 @@ mainbox {
 
 inputbar {
     background-color: #212123;
-    border-color: #4b80ca;
+    border-color: #5E81AC;
     border: 2px;
-    border-radius: 10px;
     padding: 8px 16px;
     spacing: 8px;
     children: [ entry ];
@@ -43,7 +41,6 @@ listview {
 
 element {
     padding:        8px 16px;
-    border-radius:  16px;
 }
 
 element normal normal {
@@ -57,5 +54,5 @@ element alternate normal {
 }
 
 element selected normal {
-    background-color: #4b80ca;
+    background-color: #5E81AC;
 }
