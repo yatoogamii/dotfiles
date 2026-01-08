@@ -31,7 +31,7 @@ return {
 			},
 		},
 		sources = {
-			default = { "lsp", "buffer" },
+			default = { "lsp", "omni" },
 		},
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 		signature = { enabled = true },
