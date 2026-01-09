@@ -32,13 +32,13 @@ return {
 			},
 		})
 
-		-- Remap
 		local builtin = require("telescope.builtin")
 
-		vim.keymap.set("n", "<C-p>", builtin.find_files)
+		-- Remap
+		vim.keymap.set("n", "<C-p>", "<cmd>lua require'config.telescope-config'.project_files()<CR>")
 		vim.keymap.set("n", "<leader>pf", builtin.git_files)
 		vim.keymap.set("n", "<leader>pl", builtin.live_grep)
 		vim.keymap.set("n", "<leader>py", builtin.registers)
-		vim.keymap.set("n", "<leader>pd", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+		vim.keymap.set("n", "<leader>pd", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>")
 	end,
 }
