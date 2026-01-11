@@ -12,6 +12,7 @@ return {
 					cs = { "clangd-format" },
 					cpp = { "clangd-format" },
 					json = { "jq" },
+					markdown = { "prettier" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
