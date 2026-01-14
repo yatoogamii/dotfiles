@@ -8,9 +8,9 @@ return {
 			conform.setup({
 				formatters_by_ft = {
 					lua = { "stylua" },
-					c = { "clangd-format" },
-					cs = { "clangd-format" },
-					cpp = { "clangd-format" },
+					c = { "clang-format" },
+					cs = { "clang-format" },
+					cpp = { "clang-format" },
 					json = { "jq" },
 					markdown = { "prettier" },
 				},

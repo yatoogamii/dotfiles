@@ -36,6 +36,7 @@ EnableHighlightForFileTypes({
 	"markdown",
 	"vim",
 	"lua",
+	"zig",
 })
 
 -- Diagnostic Config

@@ -29,3 +29,11 @@ vim.lsp.config("jsonls", {
 	},
 })
 vim.lsp.enable("jsonls")
+
+--- Zig
+vim.lsp.config("zls", {
+	init_options = {
+		provideFormatter = true,
+	},
+})
+vim.lsp.enable("zls")
