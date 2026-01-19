@@ -1,5 +1,5 @@
 -- LSP Language Server Protocol
---- C
+--- C/C++
 vim.lsp.config("clangd", {
 	init_options = {
 		provideFormatter = false,
@@ -30,10 +30,10 @@ vim.lsp.config("jsonls", {
 })
 vim.lsp.enable("jsonls")
 
---- Zig
-vim.lsp.config("zls", {
+--- C#
+vim.lsp.config("roslyn", {
 	init_options = {
 		provideFormatter = true,
 	},
 })
-vim.lsp.enable("zls")
+vim.lsp.enable("roslyn")

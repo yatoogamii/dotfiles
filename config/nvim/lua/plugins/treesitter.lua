@@ -17,7 +17,6 @@ return {
 			"c_sharp",
 			"json",
 			"comment",
-			"zig",
 		})
 	end,
 }
