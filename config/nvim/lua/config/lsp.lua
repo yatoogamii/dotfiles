@@ -37,3 +37,11 @@ vim.lsp.config("roslyn", {
 	},
 })
 vim.lsp.enable("roslyn")
+
+--- GO
+vim.lsp.config("gopls", {
+	init_options = {
+		provideFormatter = true,
+	},
+})
+vim.lsp.enable("gopls")

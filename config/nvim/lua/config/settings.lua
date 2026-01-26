@@ -36,6 +36,7 @@ EnableHighlightForFileTypes({
 	"markdown",
 	"vim",
 	"lua",
+	"go",
 })
 
 -- Diagnostic Config
