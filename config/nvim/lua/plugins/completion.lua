@@ -3,6 +3,7 @@ return {
 	version = "1.*",
 	dependencies = {
 		"xzbdmw/colorful-menu.nvim",
+		"Exafunction/windsurf.nvim",
 	},
 	opts = {
 		keymap = { preset = "default", ["<CR>"] = { "select_and_accept", "fallback" } },
@@ -31,7 +32,10 @@ return {
 			},
 		},
 		sources = {
-			default = { "lsp", "omni" },
+			default = { "lsp", "omni", "codeium" },
+			providers = {
+				codeium = { name = "Codeium", module = "codeium.blink", async = true },
+			},
 		},
 		fuzzy = { implementation = "prefer_rust_with_warning" },
 		signature = { enabled = true },
