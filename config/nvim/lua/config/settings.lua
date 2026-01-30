@@ -37,6 +37,9 @@ EnableHighlightForFileTypes({
 	"vim",
 	"lua",
 	"go",
+	"dockerfile",
+	"yaml",
+	"sql",
 })
 
 -- Diagnostic Config

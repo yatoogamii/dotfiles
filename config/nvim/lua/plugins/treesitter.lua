@@ -18,6 +18,9 @@ return {
 			"json",
 			"comment",
 			"go",
+			"dockerfile",
+			"yaml",
+			"sql",
 		})
 	end,
 }
