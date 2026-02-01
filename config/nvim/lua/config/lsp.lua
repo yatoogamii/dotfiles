@@ -50,3 +50,7 @@ vim.lsp.config("sqls", {
 	end,
 })
 vim.lsp.enable("sqls")
+
+--- YAML
+vim.lsp.config("yamlls", {})
+vim.lsp.enable("yamlls")

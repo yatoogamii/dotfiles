@@ -14,6 +14,7 @@ return {
 		registries = {
 			"github:mason-org/mason-registry",
 			"github:Crashdummyy/mason-registry",
+			"file:~/projects/mason-registry",
 		},
 	},
 }

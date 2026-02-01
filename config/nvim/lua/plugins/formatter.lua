@@ -13,6 +13,7 @@ return {
 					json = { "jq" },
 					markdown = { "prettier" },
 					rust = { "rustfmt" },
+					sql = { "sleek" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
