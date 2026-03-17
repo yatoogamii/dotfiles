@@ -58,7 +58,7 @@ vim.keymap.set("n", "<leader>3", vim.lsp.buf.code_action)
 -- Terminal
 vim.keymap.set("n", "<F12>", function()
 	if vim.bo.buftype ~= "terminal" then
-		vim.cmd("belowright 10split | terminal")
+		vim.cmd("botright 10split | terminal")
 	end
 	vim.cmd("startinsert")
 end)
