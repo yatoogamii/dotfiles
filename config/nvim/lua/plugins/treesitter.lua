@@ -14,6 +14,7 @@ return {
 			"markdown",
 			"markdown_inline",
 			"cpp",
+			"zig",
 			"c_sharp",
 			"json",
 			"comment",

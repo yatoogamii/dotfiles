@@ -14,6 +14,7 @@ return {
 					markdown = { "prettier" },
 					rust = { "rustfmt" },
 					sql = { "sleek" },
+					js = { "prettier" },
 				},
 				format_on_save = {
 					timeout_ms = 500,

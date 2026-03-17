@@ -54,3 +54,11 @@ vim.lsp.enable("sqls")
 --- YAML
 vim.lsp.config("yamlls", {})
 vim.lsp.enable("yamlls")
+
+--- Zig
+vim.lsp.config("zls", {
+	init_options = {
+		provideFormatter = true,
+	},
+})
+vim.lsp.enable("zls")

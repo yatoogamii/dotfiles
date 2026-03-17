@@ -56,8 +56,19 @@ end)
 vim.keymap.set("n", "<leader>3", vim.lsp.buf.code_action)
 
 -- Terminal
-vim.keymap.set("n", "<F12>", "<CMD>vsplit | term<CR>", {})
-vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
+vim.keymap.set("n", "<F12>", function()
+	if vim.bo.buftype ~= "terminal" then
+		vim.cmd("belowright 10split | terminal")
+	end
+	vim.cmd("startinsert")
+end)
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
 
 -- Remove Highlight
 vim.keymap.set("n", "<esc>", "<cmd>nohl<CR>")
+
+-- reset size of all windows
+vim.keymap.set("n", "<leader>=", "<C-w>=")
+-- resize height of focused window
+vim.keymap.set("n", "<A-PageUp>", "<cmd>resize +5 <CR>")
+vim.keymap.set("n", "<A-PageDown>", "<cmd>resize -5 <CR>")

@@ -32,6 +32,7 @@ EnableHighlightForFileTypes({
 	"c",
 	"cs",
 	"cpp",
+	"zig",
 	"json",
 	"markdown",
 	"vim",

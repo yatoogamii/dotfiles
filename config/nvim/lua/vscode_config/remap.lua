@@ -34,5 +34,9 @@ vim.keymap.set("n", "<leader>2", function()
 end)
 vim.keymap.set("n", "<leader>3", vim.lsp.buf.code_action)
 
+-- Terminal
+vim.keymap.set("n", "<F12>", "<CMD>vsplit | term<CR>", {})
+vim.keymap.set("t", "<esc>", "<C-\\><C-n>")
+
 -- Remove Highlight
 vim.keymap.set("n", "<esc>", "<cmd>nohl<CR>")
