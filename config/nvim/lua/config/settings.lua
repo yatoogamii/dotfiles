@@ -58,3 +58,22 @@ vim.diagnostic.config({
 	-- Show the letter E/W on the sidebar where the error is
 	signs = true,
 })
+
+-- GDScript + Windsurf indentation fix
+--- Set tabs for GDScript
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "gdscript",
+	callback = function()
+		vim.opt_local.expandtab = false -- use real tabs
+		vim.opt_local.tabstop = 4 -- Godot default
+		vim.opt_local.shiftwidth = 4
+	end,
+})
+
+--- Force retabbing
+vim.api.nvim_create_autocmd("BufWritePre", {
+	pattern = "*.gd",
+	callback = function()
+		vim.cmd("silent! retab!")
+	end,
+})

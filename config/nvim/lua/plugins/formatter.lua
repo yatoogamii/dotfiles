@@ -14,7 +14,6 @@ return {
 					markdown = { "prettier" },
 					sql = { "sleek" },
 					js = { "prettier" },
-					gdscript = { "gdscript-formatter" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
