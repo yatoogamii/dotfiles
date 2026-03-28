@@ -22,6 +22,7 @@ return {
 			"dockerfile",
 			"yaml",
 			"sql",
+			"gscript",
 		})
 	end,
 }

@@ -7,6 +7,9 @@ vim.opt.undofile = true
 -- Show number on the side
 vim.wo.number = true
 
+-- Show tab line even when only one file is open
+vim.opt.showtabline = 2
+
 -- Tab/Indent
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
@@ -41,6 +44,7 @@ EnableHighlightForFileTypes({
 	"dockerfile",
 	"yaml",
 	"sql",
+	"gdscript",
 })
 
 -- Diagnostic Config

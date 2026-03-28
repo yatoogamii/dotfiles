@@ -62,3 +62,7 @@ vim.lsp.config("zls", {
 	},
 })
 vim.lsp.enable("zls")
+
+--- GDScript
+vim.lsp.config("gdscript", {})
+vim.lsp.enable("gdscript")
