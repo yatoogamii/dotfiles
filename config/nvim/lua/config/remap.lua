@@ -72,3 +72,6 @@ vim.keymap.set("n", "<leader>=", "<C-w>=")
 -- resize height of focused window
 vim.keymap.set("n", "<A-PageUp>", "<cmd>resize +5 <CR>")
 vim.keymap.set("n", "<A-PageDown>", "<cmd>resize -5 <CR>")
+
+-- neo-tree
+vim.keymap.set("n", "<F1>", "<cmd>Neotree toggle<CR>")
