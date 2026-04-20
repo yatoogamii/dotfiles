@@ -22,7 +22,9 @@ return {
 			"dockerfile",
 			"yaml",
 			"sql",
-			"gscript",
+			"gdscript",
+			"terraform",
+			"hcl",
 		})
 	end,
 }
