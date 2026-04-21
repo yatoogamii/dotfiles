@@ -66,3 +66,7 @@ vim.lsp.enable("zls")
 --- GDScript
 vim.lsp.config("gdscript", {})
 vim.lsp.enable("gdscript")
+
+--- Terraform
+vim.lsp.config("terraformls", {})
+vim.lsp.enable("terraformls")
