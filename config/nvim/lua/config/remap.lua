@@ -38,9 +38,13 @@ vim.keymap.set("n", "<leader>[", function()
 end)
 
 -- GoTo
-vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-vim.keymap.set("n", "gr", vim.lsp.buf.rename)
-vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
+local tb = require("telescope.builtin")
+
+vim.keymap.set("n", "gd", tb.lsp_definitions, {})
+-- nowait for instand reaction and ignoring gr+ shortcut
+vim.keymap.set("n", "gr", tb.lsp_references, { nowait = true })
+vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
+vim.keymap.set("n", "gi", tb.lsp_implementations, {})
 
 -- LSP Informations
 vim.keymap.set("n", "<leader>1", function()

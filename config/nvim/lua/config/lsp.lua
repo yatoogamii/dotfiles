@@ -70,3 +70,9 @@ vim.lsp.enable("gdscript")
 --- Terraform
 vim.lsp.config("terraformls", {})
 vim.lsp.enable("terraformls")
+
+--- JS/TS
+vim.lsp.config("ts_ls", {})
+vim.lsp.enable("ts_ls")
+vim.lsp.config("eslint", {})
+vim.lsp.enable("eslint")

@@ -13,7 +13,8 @@ return {
 					json = { "jq" },
 					markdown = { "prettier" },
 					sql = { "sleek" },
-					js = { "prettier" },
+					javascript = { "prettier" },
+					typescript = { "prettier" },
 					terraform = { "terraform_fmt" },
 				},
 				format_on_save = {
