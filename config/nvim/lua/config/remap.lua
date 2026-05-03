@@ -39,7 +39,6 @@ end)
 
 -- GoTo
 local tb = require("telescope.builtin")
-
 vim.keymap.set("n", "gd", tb.lsp_definitions, {})
 -- nowait for instand reaction and ignoring gr+ shortcut
 vim.keymap.set("n", "gr", tb.lsp_references, { nowait = true })
