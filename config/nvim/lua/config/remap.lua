@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 -- Use : instead of ; for command mode
 vim.keymap.set("n", ";", ":", {})
 vim.keymap.set("n", ":", "<Nop>", {})
