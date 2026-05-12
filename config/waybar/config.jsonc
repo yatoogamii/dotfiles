@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "output": "HDMI-A-1",
+  "output": "DP-2",
   "position": "top",
   "height": 40,
   // Left Modules
@@ -59,13 +59,13 @@
   "custom/temperature": {
     "exec": "sensors | awk '/Tctl:/ {print int($2)}'",
     "format": "  {}°C",
-    "interval": 20,
+    "interval": 10,
     "tooltip": false
   },
   "custom/gpu": {
-    "exec": "nvidia-smi -a | awk '/GPU  / {print int($3)}'",
-    "format": "   {}%",
-    "interval": 20,
+    "exec": "nvtop -s | jq -r '.[0].gpu_util'",
+    "format": "   {}",
+    "interval": 10,
     "tooltip": false
   }
 }
