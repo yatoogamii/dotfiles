@@ -47,3 +47,7 @@ vim.lsp.config("ts_ls", {})
 vim.lsp.enable("ts_ls")
 vim.lsp.config("eslint", {})
 vim.lsp.enable("eslint")
+
+--- Docker
+vim.lsp.config("docker_language_server", {})
+vim.lsp.enable("docker_language_server")

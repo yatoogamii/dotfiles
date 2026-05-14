@@ -76,3 +76,7 @@ vim.keymap.set("n", "<A-PageDown>", "<cmd>resize -5 <CR>")
 
 -- neo-tree
 vim.keymap.set("n", "<F1>", "<cmd>Neotree toggle<CR>")
+
+-- System Clipboard
+vim.keymap.set("n", "<C-S-c>", '"+y')
+vim.keymap.set("v", "<C-S-c>", '"+y')
