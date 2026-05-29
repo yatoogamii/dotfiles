@@ -80,3 +80,10 @@ vim.keymap.set("n", "<F1>", "<cmd>Neotree toggle<CR>")
 -- System Clipboard
 vim.keymap.set("n", "<C-S-c>", '"+y')
 vim.keymap.set("v", "<C-S-c>", '"+y')
+
+-- Reverse n/N search occurence
+vim.keymap.set("n", "n", "N")
+vim.keymap.set("n", "N", "n")
+
+-- Disable open man when being in insert mode
+vim.keymap.set("i", "<F1>", "<Nop>")

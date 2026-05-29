@@ -9,7 +9,8 @@ return {
 			require("codeium").setup({
 				enable_cmp_source = false,
 				virtual_text = {
-					enabled = true,
+					-- enable / disable windsurf
+					enabled = false,
 				},
 			})
 		end,

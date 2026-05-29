@@ -33,7 +33,6 @@ return {
 		},
 		sources = {
 			default = { "lsp" },
-			-- default = { "lsp", "codeium" },
 			providers = {
 				codeium = { name = "Codeium", module = "codeium.blink", async = true },
 			},

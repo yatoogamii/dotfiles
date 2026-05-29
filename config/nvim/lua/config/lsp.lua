@@ -51,3 +51,11 @@ vim.lsp.enable("eslint")
 --- Docker
 vim.lsp.config("docker_language_server", {})
 vim.lsp.enable("docker_language_server")
+
+--- C++
+vim.lsp.config("clangd", {})
+vim.lsp.enable("clangd")
+
+--- GDScript
+vim.lsp.config("gdscript", {})
+vim.lsp.enable("gdscript")

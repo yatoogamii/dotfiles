@@ -13,6 +13,8 @@ return {
 					javascript = { "prettier" },
 					typescript = { "prettier" },
 					terraform = { "terraform_fmt" },
+					cpp = { "clang_format" },
+					c = { "clang_format" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
